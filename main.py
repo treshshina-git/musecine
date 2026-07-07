@@ -96,8 +96,8 @@ async def process_end_time(message: types.Message, state: FSMContext):
         if os.path.exists(output_filename):
             os.remove(output_filename)
             def download_video(url, opts):
-    with yt_dlp.YoutubeDL(opts) as ydl:
-        ydl.download([url])
+                with yt_dlp.YoutubeDL(opts) as ydl:
+                    ydl.download([url])
 
 def parse_time_to_seconds(time_str: str) -> float:
     
