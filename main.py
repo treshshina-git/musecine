@@ -9,7 +9,7 @@ from aiogram.types import FSInputFile
 import yt_dlp
 
 # Токен вашего бота (получите у @BotFather)
-BOT_TOKEN = "ВАШ_ТЕЛЕГРАМ_ТОКЕН_ЗДЕСЬ"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
